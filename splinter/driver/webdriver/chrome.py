@@ -18,6 +18,7 @@ class WebDriver(BaseWebDriver):
                  **kwargs):
 
         options = Options()
+        options = options.add_argument("--no-sandbox")
 
         if user_agent is not None:
             options.add_argument("--user-agent=" + user_agent)
